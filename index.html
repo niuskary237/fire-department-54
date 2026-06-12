@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fire Station Dashboard</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- Chart.js para el gráfico -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+
+<div class="topbar">
+? Fire Station Control System
+</div>
+
+<div class="container">
+
+<h2>Dashboard</h2>
+
+<!-- TARJETAS -->
+<div class="cards">
+
+<div class="card">
+<h3>Total Records</h3>
+<p id="total">0</p>
+</div>
+
+<div class="card">
+<h3>Present</h3>
+<p id="present">0</p>
+</div>
+
+<div class="card">
+<h3>Absent</h3>
+<p id="absent">0</p>
+</div>
+
+<div class="card">
+<h3>Late</h3>
+<p id="late">0</p>
+</div>
+
+</div>
+
+<!-- BOTONES -->
+<div class="buttons">
+    <button class="btn" onclick="clearToday()">Clear Today</button>
+    <a class="btn" href="attendance.html">Go to Attendance</a>
+    <a class="btn" href="summary.html">View Summary</a>
+</div>
+
+<hr>
+
+<!-- GRÁFICO -->
+<h2>Daily Chart</h2>
+<canvas id="dailyChart" width="400" height="200"></canvas>
+
+<hr>
+
+<!-- LISTA DE NOMBRES -->
+<h2>Names Today</h2>
+<div id="namesList"></div>
+
+</div>
+
+<script src="script.js"></script>
+<script>
+loadDashboard();
+loadDailyChart();
+loadNamesForToday();
+</script>
+
+</body>
+</html>
+

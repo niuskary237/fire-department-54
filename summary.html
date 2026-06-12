@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Attendance Summary</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- Chart.js para el gráfico -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+
+<div class="topbar">Attendance Summary</div>
+
+<div class="container">
+
+<h2>Summary</h2>
+
+<!-- Totales -->
+<div id="summary"></div>
+
+<hr>
+
+<!-- Lista de nombres -->
+<h2>Names Today</h2>
+<div id="namesList"></div>
+
+<hr>
+
+<!-- Gráfico -->
+<h2>Daily Chart</h2>
+<canvas id="dailyChart" width="400" height="200"></canvas>
+
+<br>
+<a class="btn" href="index.html">Back</a>
+
+</div>
+
+<script src="script.js"></script>
+<script>
+loadSummary();
+loadNamesForToday();
+loadDailyChart();
+</script>
+
+</body>
+</html>
